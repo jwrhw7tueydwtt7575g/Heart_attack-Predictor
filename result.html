@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background: #ffe6e6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 99, 71, 0.4);
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #b22222;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: 1.2px;
+        }
+
+        .message {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            color: white;
+        }
+
+        /* Danger style */
+        .danger {
+            background-color: #b22222;
+            box-shadow: 0 0 15px #b22222;
+        }
+
+        /* Success style */
+        .success {
+            background-color: #3cb371;
+            box-shadow: 0 0 15px #3cb371;
+        }
+
+        .heart {
+            font-size: 40px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #b22222;
+            font-weight: 600;
+            border: 2px solid #b22222;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #b22222;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <div class="message {{ status }}">
+            <div class="heart">❤️</div>
+            <div>{{ prediction }}</div>
+        </div>
+        <a href="/">Make Another Prediction</a>
+    </div>
+</body>
+</html
